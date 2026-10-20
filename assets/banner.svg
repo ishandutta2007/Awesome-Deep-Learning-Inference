@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b14" />
+      <stop offset="40%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#060810" />
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Neural Network Node Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.08); }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 160; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+      50% { transform: translateY(-12px) translateX(8px); opacity: 0.9; }
+    }
+    .grid-line { stroke: #1e293b; stroke-width: 1; opacity: 0.45; }
+    .flow-path { stroke: url(#primaryGlow); stroke-width: 2.2; stroke-dasharray: 8 6; animation: flowLine 14s linear infinite; }
+    .flow-path-fast { stroke: url(#accentGreen); stroke-width: 2; stroke-dasharray: 6 5; animation: flowLine 8s linear infinite; }
+    .pulse-blob { animation: pulseGlow 6s ease-in-out infinite; transform-origin: center; }
+    .particle { animation: floatParticle 5s ease-in-out infinite; }
+  </style>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Ambient Dynamic Glow Orbs in Deep Background -->
+  <circle cx="220" cy="90" r="130" fill="#38bdf8" opacity="0.12" class="pulse-blob" filter="url(#softGlow)" />
+  <circle cx="980" cy="270" r="150" fill="#818cf8" opacity="0.14" class="pulse-blob" filter="url(#softGlow)" />
+  <circle cx="600" cy="340" r="120" fill="#c084fc" opacity="0.1" class="pulse-blob" filter="url(#softGlow)" />
+
+  <!-- Subtle Perspective Computing Grid in Background -->
+  <g class="grid-line">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Flowing Dynamic Computation Pipelines -->
+  <path d="M -20 100 Q 250 40 450 110 T 850 70 T 1220 120" fill="none" class="flow-path" />
+  <path d="M -20 280 Q 280 320 580 260 T 950 310 T 1220 250" fill="none" class="flow-path-fast" />
+
+  <!-- Floating Accelerator Badges / Nodes in Lateral Spaces (Preserving Clear Center for Title) -->
+  <g transform="translate(45, 48)" class="particle">
+    <rect width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.85" />
+    <circle cx="16" cy="15" r="4" fill="#38bdf8" />
+    <text x="30" y="19" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">⚡ CUDA / TensorRT</text>
+  </g>
+
+  <g transform="translate(75, 275)" class="particle" style="animation-delay: -2.5s;">
+    <rect width="120" height="30" rx="15" fill="#1e293b" stroke="#10b981" stroke-width="1.2" opacity="0.85" />
+    <circle cx="16" cy="15" r="4" fill="#10b981" />
+    <text x="30" y="19" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🚀 vLLM Serving</text>
+  </g>
+
+  <g transform="translate(1015, 52)" class="particle" style="animation-delay: -1.2s;">
+    <rect width="135" height="30" rx="15" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" opacity="0.85" />
+    <circle cx="16" cy="15" r="4" fill="#c084fc" />
+    <text x="30" y="19" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🧠 On-Device NPU</text>
+  </g>
+
+  <g transform="translate(995, 275)" class="particle" style="animation-delay: -3.8s;">
+    <rect width="155" height="30" rx="15" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2" opacity="0.85" />
+    <circle cx="16" cy="15" r="4" fill="#f59e0b" />
+    <text x="30" y="19" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">⚙️ TVM &amp; Compilers</text>
+  </g>
+
+  <!-- Dynamic Pulsing Beacon Nodes -->
+  <g transform="translate(195, 105)">
+    <circle cx="0" cy="0" r="6" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#38bdf8" stroke-width="1.5">
+      <animate attributeName="r" values="4;18" dur="2.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g transform="translate(1005, 115)">
+    <circle cx="0" cy="0" r="6" fill="#c084fc" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#c084fc" stroke-width="1.5">
+      <animate attributeName="r" values="4;18" dur="2.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- ================= FOREGROUND HERO CONTENT ================= -->
+  <!-- Category Pill -->
+  <g transform="translate(600, 72)">
+    <rect x="-160" y="-16" width="320" height="32" rx="16" fill="#0f172a" stroke="url(#primaryGlow)" stroke-width="1.5" />
+    <text x="0" y="4" text-anchor="middle" fill="#38bdf8" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.5">✨ PRODUCTION INFERENCE ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="156" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" filter="url(#glow)">
+    Awesome Deep Learning Inference
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="198" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="500" letter-spacing="0.2">
+    The Curated Hub for LLM Serving, Graph Compilers, Edge Runtimes &amp; Hardware Acceleration
+  </text>
+
+  <!-- Key Highlights Row -->
+  <g transform="translate(600, 246)">
+    <text x="-250" y="0" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">⚡ TensorRT · TVM · OpenVINO</text>
+    <circle cx="-120" cy="-4" r="2.5" fill="#475569" />
+    <text x="0" y="0" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">🔥 vLLM · SGLang · Triton · Ollama</text>
+    <circle cx="125" cy="-4" r="2.5" fill="#475569" />
+    <text x="245" y="0" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">📱 Core ML · QNN · Neuron · Arm NN</text>
+  </g>
+
+  <!-- Bottom Accent Gradient Line -->
+  <rect x="350" y="295" width="500" height="3" rx="1.5" fill="url(#primaryGlow)" opacity="0.8" />
+</svg>
