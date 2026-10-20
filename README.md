@@ -44,27 +44,12 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
-- **NVIDIA TensorRT (Commercial Support)**
-
-  **SDK for high-performance deep learning inference on NVIDIA GPUs**. The repository contains the **open-source components**—the core builder and runtime are distributed as pre-built binaries with commercial support available. **The reference for NVIDIA GPU inference**—takes an ONNX model, compiles it into a hardware-specific engine, and picks the fastest available GPU kernel for each layer. **Build prerequisites**: TensorRT v10.7.0.23, CUDA 12.6 or 11.8, cuDNN 8.9, Python 3.8–3.10 .
-
-
-
-- **Apple Core ML**
-
-  **Apple's framework for on-device inference on iPhone, iPad, and Mac**. **Note**: The compiler and runtime are **closed-source**—you convert models using `coremltools` (open-source Python package) and deploy through Xcode. **The on-device choice** for Apple platforms—optimizes for the Neural Engine (ANE) and GPU. **`coremltools` 9.0** supports converting from TensorFlow, PyTorch, and scikit-learn to the `.mlmodel` format .
-
-
-
-- **Qualcomm QNN (Neural Processing SDK)**
-
-  **Qualcomm's SDK for inference on Snapdragon mobile and edge platforms**. **Note**: Proprietary—requires Qualcomm developer account. **The Snapdragon choice** for Android and IoT deployments. **QNN execution provider** enables ONNX Runtime inference on **Hexagon NPUs** in Snapdragon processors with **exceptional power efficiency** for battery-powered devices .
-
-
-
-- **AWS Neuron**
-
-  **SDK for inference on AWS Inferentia and Trainium chips**. **Note**: Compiler and runtime are **closed-source**—you use the Neuron SDK to compile models for AWS silicon. **The AWS-specific choice** for cost-optimized inference on Inferentia instances. **NKI Compiler** is open-source (MLIR-based) and provides visibility into the compilation pipeline .
+| Platform | Description & Key Strengths | Pricing | Free Tier Limits |
+| :--- | :--- | :--- | :--- |
+| **NVIDIA TensorRT (Commercial Support / NVIDIA AI Enterprise)** | SDK for high-performance deep learning inference on NVIDIA GPUs. While core components are open source, enterprise commercial support, LTS releases, SLA-backed engineering support, and vulnerability patches are licensed through NVIDIA AI Enterprise. Takes ONNX models, compiles them into hardware-specific engines, and picks optimal GPU kernels. | Starts at **$4,500/GPU/year** (1-year subscription including Business Standard Support) or **$1.00/GPU/hour** on cloud CSP marketplaces (AWS, Azure, GCP). | **90-day free trial** of NVIDIA AI Enterprise software evaluation license on compatible NVIDIA-certified infrastructure. |
+| **Apple Core ML (Apple Developer Program)** | Apple's framework for on-device inference on iPhone, iPad, and Mac. Closed-source compiler and runtime utilizing `coremltools` for model conversion (`.mlmodel`). Optimizes directly for Apple Neural Engine (ANE) and Apple Silicon GPUs. | **$99/year** for standard Apple Developer Program membership (required for TestFlight beta testing and App Store distribution). | **Free forever** with a standard Apple ID for local development and on-device testing via Xcode (apps side-loaded on personal devices expire every 7 days). |
+| **Qualcomm QNN (Neural Processing SDK / Qualcomm AI Hub)** | Qualcomm's SDK and hosted AI Hub for inference on Snapdragon mobile and edge platforms. Features QNN execution provider for ONNX Runtime on Hexagon NPUs with industry-leading power efficiency for battery-powered IoT and mobile devices. | **$0** (Free developer license via Qualcomm Developer Network; commercial distribution governed by standard QDN product license terms). | **Free forever** with a registered Qualcomm ID account (includes access to SDK downloads, pre-optimized model catalog, and cloud device benchmarking/profiling on Qualcomm AI Hub). |
+| **AWS Neuron (Amazon EC2 Inf1 / Inf2)** | SDK and hosted cloud accelerator instances for deep learning inference on AWS Inferentia (Inf1/Inf2) and Trainium chips. Closed-source compiler/runtime with open-source MLIR-based NKI compiler for high-throughput, low-cost generative AI and transformer inference. | Starts at **$0.362/hour** for `inf1.2xlarge` and **$0.758/hour** for `inf2.xlarge` (On-Demand pricing in US regions; AWS Neuron SDK software itself is free). | **12-month free trial** credits for new AWS accounts (starts with $100 promotional credits valid across services up to 6 months; note that Inf1/Inf2 instances are excluded from the standard 750 hrs/month micro-instance Free Tier). |
 
 
 
