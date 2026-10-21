@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Deep-Learning-Inference"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Deep-Learning-Inference?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Deep-Learning-Inference"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Deep-Learning-Inference?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Deep-Learning-Inference/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Deep-Learning-Inference?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Deep-Learning-Inference/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -66,9 +66,9 @@ The following table summarizes enterprise SaaS and hosted inference acceleration
 
 ## 🛠️ Open-Source GitHub Projects
 
-The premier open-source repositories powering self-hosted deep learning inference, graph compilation, model quantization, and production model serving—**sorted by GitHub Star Count in descending order**.
+The premier open-source repositories powering self-hosted deep learning inference, graph compilation, model quantization, and production model serving—**sorted by GitHub Stars_Count in descending order**.
 
-| Rank | Project & Repository | Stars Badge | License | Primary Focus & Capabilities |
+| Rank | Project & Repository | Stars_Badge | License | Primary Focus & Capabilities |
 | :---: | :--- | :---: | :---: | :--- |
 | 1 | **[Ollama](https://github.com/ollama/ollama)** | [![Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers) | MIT | 🦙 **Turnkey Local LLM Execution**: Get up and running with Llama 3, DeepSeek, Mistral, and custom models locally across macOS, Windows, and Linux with a single command and OpenAI-compatible API. |
 | 2 | **[llama.cpp](https://github.com/ggerganov/llama.cpp)** | [![Stars](https://img.shields.io/github/stars/ggerganov/llama.cpp?style=social&color=white)](https://github.com/ggerganov/llama.cpp/stargazers) | MIT | 💻 **Pure C/C++ Inference Engine**: The gold standard for quantized CPU/GPU inference with zero dependencies. Powers GGUF quantization formats (2-bit to 8-bit), Apple Metal acceleration, and bare-metal edge serving. |
